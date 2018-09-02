@@ -26,6 +26,13 @@ module.exports = {
     filename: 'public.js'
   },
 
+  devServer: {
+    contentBase: path.join(__dirname, 'web'),
+    compress: true,
+    port: 9000,
+    open: true
+  },
+
   module: {
     rules: [
       {
