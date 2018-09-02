@@ -29,6 +29,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpg|png|ttf)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 1000000
+          }
+        }
+      },
+      {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,
