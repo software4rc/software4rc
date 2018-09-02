@@ -1,0 +1,31 @@
+{
+  "name": "software4rc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/software4rc/software4rc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/software4rc/software4rc/issues"
+  },
+  "homepage": "https://github.com/software4rc/software4rc#readme",
+  "dependencies": {
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
