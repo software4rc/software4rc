@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const WEB = path.join(__dirname, 'web')
-const PUBLIC_DIR = path.join(__dirname, 'public')
+const PUBLIC_DIR = path.join(__dirname, 'docs')
 
 const STYLES = path.join(WEB, 'styles')
 const SCRIPTS = path.join(WEB, 'scripts')
@@ -45,7 +45,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['public']),
+    new CleanWebpackPlugin(['doc']),
     new HtmlWebPackPlugin({
       template: WEB + '/index.html',
       minify: true,
