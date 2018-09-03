@@ -61,7 +61,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['doc']),
+    new CleanWebpackPlugin(['docs']),
     new HtmlWebPackPlugin({
       template: WEB + '/index.html',
       minify: true,
