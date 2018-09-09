@@ -17,15 +17,33 @@
   }
 
   .preview {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    padding-top: 25px;
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%!important;
-      height: 100%!important;
+    &.kisspanel {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      padding-top: 25px;
+      iframe {
+        box-shadow: 0px 8px 18px #1b1b1b;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%!important;
+        height: 100%!important;
+      }
+    }
+    &.omega {
+      .omega-in-progress {
+        box-shadow: 0px 8px 18px #1b1b1b;
+        position: relative;
+        height: 250px;
+        background-image: url(../images/omega_preview.png);
+        h3 {
+          position: absolute;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
     }
   }
 
