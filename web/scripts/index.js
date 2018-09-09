@@ -1,1 +1,1 @@
-console.log('ola k ase');
+console.log('test');

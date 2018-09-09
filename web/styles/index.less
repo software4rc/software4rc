@@ -1,15 +1,19 @@
 @import "./reset.less";
 @import "./fonts.less";
 
+@import "./vars.less";
+
+@import "./header.less";
+@import "./logos.less";
+@import "./section.less";
+@import "./footer.less";
+
 html, body {
   font-family: 'Conthrax';
-  background-color: black;
+  color: white;
+  background-color: @bg;
+  padding: 0px 4%;
 }
-
-.logo {
-  width: 363px;
-  height: 123px;
-  background-image: url("../images/software4rc-logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+p {
+  font-family: 'Tahoma';
 }

@@ -1,0 +1,33 @@
+header {
+
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 200px;
+  figure {
+    align-self: center;
+    img {
+      width: 200px;
+    }
+
+  }
+  .slogan {
+    align-self: center;
+    text-align: right;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    header {
+        min-height: 250px;
+        align-content: space-evenly;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        .slogan {
+          text-align: center;
+        }
+    }
+}
