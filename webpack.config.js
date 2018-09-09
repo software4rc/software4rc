@@ -3,16 +3,21 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const WEB = path.join(__dirname, 'web')
 const PUBLIC_DIR = path.join(__dirname, 'docs')
 
+const IMAGES = path.join(WEB, 'images')
 const STYLES = path.join(WEB, 'styles')
 const SCRIPTS = path.join(WEB, 'scripts')
 
 module.exports = {
 
-  mode: 'development',
+  mode: 'production',
+  performance: {
+    hints: false
+  },
 
   entry: {
     app: [
@@ -40,7 +45,7 @@ module.exports = {
         use: {
           loader: "url-loader",
           options: {
-            limit: 1000000
+            limit: 10000000
           }
         }
       },
@@ -62,6 +67,9 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(['docs']),
+    new CopyWebpackPlugin([
+      { from: 'web/images/', to: 'images' },
+    ]),
     new HtmlWebPackPlugin({
       template: WEB + '/index.html',
       minify: true,
