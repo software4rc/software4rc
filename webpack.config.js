@@ -12,7 +12,10 @@ const SCRIPTS = path.join(WEB, 'scripts')
 
 module.exports = {
 
-  mode: 'development',
+  mode: 'production',
+  performance: {
+    hints: false
+  },
 
   entry: {
     app: [
@@ -40,7 +43,7 @@ module.exports = {
         use: {
           loader: "url-loader",
           options: {
-            limit: 1000000
+            limit: 10000000
           }
         }
       },
